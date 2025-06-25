@@ -1,0 +1,164 @@
+<!doctype html>
+<html class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/pic/lib.png">
+  <title>E-BookList by FelienZ</title>
+  <link href="/src/CSS/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+   <link rel="stylesheet" href="/src/vendor/aos/aos.css">
+  <!-- FontAwesome -->
+   <link rel="stylesheet" href="/src/vendor/fontawesome/css/all.min.css">
+  <!-- CSS Toastify-->
+  <link rel="stylesheet" href="/src/vendor/toastify-js/src/toastify.css">
+  <!-- JS Toastify -->
+  <script src="/src/vendor/toastify-js/src/toastify.js"></script>
+
+</head>
+
+<body class="font-[Poppins] overflow-x-hidden">
+
+  <!-- Nav -->
+  <nav class="bg-gray-900 font-[Inter] text-white fixed top-0 w-screen z-10 p-3">
+  <div class="w-full mx-auto flex items-center justify-between">
+    <!-- Logo -->
+    <p class="font-bold text-nowrap text-base hover:text-lime-400 px-5">FelienZ Book's</p>
+
+    <!-- Hamburger -->
+    <button id="nav-toggle" class="md:hidden px-5 ">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+
+    <!-- Menu -->
+    <ul id="nav-menu" class="hidden flex-col md:flex md:flex-row gap-5 px-10 md:mr-5 font-normal text-sm  absolute md:static top-10 justify-end right-0 bg-gray-900 md:bg-transparent rounded items-center md:rounded-none p-4 w-full md:p-0">
+      <li><a href="#header" class="hover:text-gray-300">Home</a></li>
+      <li><a href="#bookshelf" class="hover:text-gray-300">Daftar Buku</a></li>
+      <li><a href="#bookselected" class="hover:text-gray-300">Peminjaman</a></li>
+      <li><a href="#footer" class="hover:text-gray-300">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Home Section -->
+  <header class="w-full mt-10 place-items-center p-10 min-h-screen text-slate-900 bg-gray-50 grid justify-center md:grid-cols-2" id="header">
+    <div class="flex flex-col gap-3" data-aos="fade-right">
+      <div class="text-center bg-blue-600 cursor-pointer hover:bg-blue-700 flex justify-center items-center gap-5 px-5 py-1 text-sm rounded-full" id="list-toggler">
+        <i class="fa-solid fa-book text-white"></i> 
+        <p class="text-white">Find Your Books Here!</p>
+      </div>
+      <div class="font-[Outfit] text-2xl font-bold">
+        Selamat Datang di <span class="text-blue-600">E-BookList! </span>
+      </div>
+      <div class="subtitle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus totam maiores cumque quia nesciunt corporis quidem reiciendis eius quod officia.
+      </div>
+      <div class="button flex gap-1">
+      <button class="bg-blue-600 w-fit px-3 py-1 hover:text-blue-600 cursor-pointer hover:bg-transparent hover:border-1 hover:border-blue-600 text-white" id="list-toggler">Search Now!</button>
+      <button class="bg-transparent border-1 border-solid border-blue-600 cursor-pointer hover:bg-blue-700 hover:text-white w-fit px-3 py-1 text-blue-600" id="info-toggler">Info About Us</button>
+
+      </div>
+    </div>
+    <div class="image" data-aos="fade-left">
+      <img src="pic/pngtree-people-read-books-in-digital-libraries-on-a-giant-smartphone-screens-png-image_6099506.png" alt="">
+    </div>
+  </header>
+
+  <!-- Buku Card-Section -->
+  <main class="bg-white p-10 text-center grid place-content-center box-border items-center gap-5 min-h-screen" id="bookshelf">
+    <p class="text-blue-600" data-aos="zoom-in">Inspirational</p>
+    <p class="font-bold text-2xl text-gray-800" data-aos="zoom-in">Book List <span class="text-blue-600">by FelienZ</span></p>
+    <div class="content p-5 flex flex-wrap justify-center gap-5 h-full max-w-full rounded-md" id="book-list" data-aos="fade-up">
+    </div>
+  </main>
+
+  <!-- Peminjaman Card-Section -->
+  <section class="	bg-gray-100  p-10 text-center grid place-content-center gap-5 text-gray-800 min-h-screen" id="bookselected">
+    <p class="font-bold text-2xl" data-aos="zoom-out">Peminjamanmu</p>
+    <div class="card-peminjaman hidden p-5 flex-wrap justify-center gap-5 min-w-full rounded-md" data-aos="fade-up">
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 p-5 grid place-content-start justify-center gap-y-10 w-full text-gray-300 text-center min-h-fit" id="footer">
+    
+    <div class="flex flex-col gap-3 justify-center mt-5 w-full" data-aos="fade-in">
+        <p class="font-bold text-lg">STAY TUNED FOR <span class="text-lime-400">MORE UPDATES!</span></p>
+        <hr class="text-lime-400 w-50 m-auto">
+        <div class="form flex-row">
+          <input type="text" class="bg-gray-200  text-black text-sm p-2 rounded-sm text-center" placeholder="Enter Books Here" id="searchBook">
+          <button class="bg-lime-500 p-1.5 px-2 text-gray-100 hover:bg-transparent hover:border-1 cursor-pointer rounded-sm hover:border-lime-400" id="btnSearchBook">Enter</button>
+        </div>
+    </div>
+    
+    <div class="info flex flex-col md:flex-row content-start justify-between gap-6 w-full text-justify" data-aos="fade-in">
+      <div class="about flex flex-col gap-5 md:max-w-1/3 text-sm">
+        <p class="text-lime-400 text-lg font-[Inter] font-bold">
+          FelienZ Library
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, autem libero eligendi illo a iste!
+        </p>
+        <div class="logo flex gap-5 text-lg">
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+      </div>
+      <div class="product grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-sm mt-5 md:mt-0 list-none">
+        <div class="items-1 flex flex-col gap-5">
+          <p class="text-lime-400 text-lg">About Me</p>
+          <ul class="flex flex-col gap-2">
+            <li class="hover:underline hover:text-lime-400"><i class="fa-solid fa-business-time"></i> Portofolio</li>
+            <li class="hover:underline hover:text-lime-400"><i class="fa-solid fa-address-card"></i> Bio</li>
+            <li class="hover:underline hover:text-lime-400"><i class="fa-solid fa-link"></i> Connect</li>
+          </ul>
+        </div>
+        <div class="items-2 flex flex-col gap-5">
+          <p class="text-lime-400 text-lg">Socials</p>
+          <ul class="flex flex-col gap-2">
+            <li class="hover:underline hover:text-lime-400"><i class="fa-brands fa-github"></i> GitHub</li>
+            <li class="hover:underline hover:text-lime-400"><i class="fa-brands fa-linkedin"></i> LinkedIn</li>
+            <li class="hover:underline hover:text-lime-400"><i class="fa-brands fa-instagram"></i> Instagram</li>
+          </ul>
+        </div>
+        <div class="items-3 flex flex-col gap-5">
+          <p class="text-lime-400 text-lg">More</p>
+          <ul class="flex flex-col gap-2">
+            <li class="hover:underline hover:text-lime-400"><i class="fa-solid fa-bag-shopping"></i> LokaStore</li>
+            <li class="hover:underline hover:text-lime-400"><i class="fa-solid fa-utensils"></i> PempekResto</li>
+            <li class="hover:underline hover:text-lime-400"><i class="fa-solid fa-book-open"></i> Manhwa World</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black/50 justify-center items-center hidden z-50">
+  <div class="bg-white shadow-xl w-[90%] max-w-lg p-5 relative rounded-lg">
+    <button id="close-modal" class="absolute top-3 right-4 text-xl font-bold text-gray-800">&times;</button>
+    <div id="modal-content" class="grid grid-cols-2 gap-4 items-start">
+
+    </div>
+  </div>
+</div>
+
+  <!-- Script -->
+  <script src="src/script/main.js" type="module"></script>
+  <!-- AOS JS -->
+  <script src="./src/vendor/aos/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false
+    });
+  </script>
+</body>
+</html>
