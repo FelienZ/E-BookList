@@ -11,8 +11,8 @@ E-BookList is a simple digital bookshelf application that allows users to view a
 ## 🔧 Tech Stack
 
 - **HTML5**
-- **Tailwind CSS v4.1.10** (via CLI)
-- **JavaScript (ES6)** with modular file structure
+- **Tailwind CSS v4.1.10**
+- **JavaScript** with modular file structure
 - **LocalStorage** for simulation
 - **Netlify** for deployment
 
@@ -23,4 +23,3 @@ E-BookList is a simple digital bookshelf application that allows users to view a
 - Code refactoring to further modularize event listeners and modal handlers
 - Optimize DOM interactions (e.g., single delegated event listener)
 - Optimize Usage in LocalStorage, with id only
-- Potential integration with real backend using Node.js/Hapi.Js 
