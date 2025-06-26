@@ -1,4 +1,4 @@
-📚 E-BookList
+## 📚 E-BookList
 
 E-BookList is a simple digital bookshelf application that allows users to view and manage a collection of books. This project was built with clean design and modular JavaScript structure in mind, using Tailwind CSS for styling and deployed via Netlify.
 
